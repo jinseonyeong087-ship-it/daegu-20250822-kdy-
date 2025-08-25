@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이력서 양식</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-gray-100 py-10">
-  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-8">
-    <h1 class="text-2xl font-bold mb-6 text-center">이력서</h1>
-
-    <form>
+<form>
       <!-- 개인정보 -->
       <section class="mb-8">
         <h2 class="text-xl font-semibold mb-4">개인정보</h2>
@@ -96,25 +82,3 @@
         </button>
       </div>
     </form>
-  </div>
-
-  <script>
-    const patterns = {
-      phone: /^[0-9]{9,}$/, // 숫자 9자리 이상
-      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ // 기본 이메일 형식
-    };
-
-    document.querySelectorAll("[data-validate]").forEach(input => {
-      input.addEventListener("input", () => {
-        const type = input.dataset.validate;
-        const errorMsg = input.nextElementSibling;
-        if (!patterns[type].test(input.value)) {
-          errorMsg.classList.remove("hidden");
-        } else {
-          errorMsg.classList.add("hidden");
-        }
-      });
-    });
-  </script>
-</body>
-</html>
